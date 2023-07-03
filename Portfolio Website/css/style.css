@@ -12,10 +12,10 @@
 }
 
 :root {
-	--bg-color: #081b29;
-	--second-bg-color: #112e42;
+	--bg-color: #001c22;
+	--second-bg-color: #003d4a;
 	--text-color: #ededed;
-	--main-color: #00abf0;
+	--main-color: #FF2D00;
 }
 
 html {
@@ -111,18 +111,18 @@ section {
 
 .home-content .text-animate {
 	position: relative;
-	width: 27.8rem;
+	width: 30.2rem;
 }
 
 .home-content .text-animate h3 {
-	font-size: 3.2rem;
+	font-size: 3.5rem;
 	font-weight: 700;
 	color: transparent;
-	-webkit-text-stroke: .7px var(--main-color);
+	-webkit-text-stroke: 1px var(--main-color);
 	background-image: linear-gradient(var(--main-color), var(--main-color));
 	background-repeat: no-repeat;
 	-webkit-background-clip: text;
-	background-position: -27.8rem 0;
+	background-position: -30.2rem 0;
 }
 
 .home.show-animate .home-content .text-animate h3 {
@@ -133,11 +133,11 @@ section {
 .home-content .text-animate h3::before {
 	content: '';
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: .55rem;
+	left: -.2rem;
 	width: 0;
-	height: 100%;
-	border-right: 2px solid var(--main-color);
+	height: 85%;
+	border-right: 2.5px solid var(--main-color);
 	z-index: -1;
 }
 
@@ -156,7 +156,7 @@ section {
 	position: relative;
 	display: flex;
 	justify-content: space-between;
-	width: 34.5rem;
+	width: 30rem;
 	height: 5rem;
 }
 
@@ -184,7 +184,7 @@ section {
 }
 
 .btn-box .btn:nth-child(2) {
-	background: transparent;
+	background: var(--bg-color);
 	color: var(--main-color);
 }
 
@@ -215,7 +215,7 @@ section {
 .home-sci {
 	position: absolute;
 	bottom: 4rem;
-	width: 170px;
+	width: 150px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -225,16 +225,20 @@ section {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	width: 40px;
-	height: 40px;
-	background: transparent;
-	border: .2rem solid var(--main-color);
+	width: 55px;
+	height: 55px;
+	background: var(--bg-color);
+	border: .3rem solid var(--main-color);
 	border-radius: 50%;
-	font-size: 20px;
+	font-size: 25px;
 	color: var(--main-color);
 	z-index: 1;
 	overflow: hidden;
 	transition: .5s;
+}
+
+.home-sci a:nth-child(2) {
+	font-size: 35px;
 }
 
 .home-sci a:hover {
@@ -907,7 +911,7 @@ section:nth-child(odd) .animate.scroll,
 	0%,
 	10%,
 	100% {
-		background-position: -27.8rem 0;
+		background-position: -30.2rem 0;
 	}
 
 	65%,
