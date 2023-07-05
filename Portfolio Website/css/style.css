@@ -15,7 +15,8 @@
 	--bg-color: #001c22;
 	--second-bg-color: #003d4a;
 	--text-color: #ededed;
-	--main-color: #FF2D00;
+	--main-color: #ff2D00;
+	--bg-image: url('../images/home0.jpg');
 }
 
 html {
@@ -79,6 +80,32 @@ body {
 	display: none;
 }
 
+#color-dropdown {
+	user-select: none;
+	position: absolute;
+	background-color: var(--second-bg-color);
+	border-radius: 7px;
+	z-index: 1;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#color-dropdown a {
+	font-size: 1.6rem;
+    color: var(--text-color);
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+#color-icon {
+	position: relative;
+	font-size: 3rem;
+	color: var(--main-color);
+	cursor: pointer;
+	margin-left: 1rem;
+}
+
 section {
 	min-height: 100vh;
 	padding: 10rem 9% 2rem;
@@ -88,7 +115,7 @@ section {
 	display: flex;
 	align-items: center;
 	padding: 0 9%;
-	background: url('../images/home.jpg') no-repeat;
+	background: var(--bg-image) no-repeat;
 	background-size: cover;
 	background-position: center;
 }
@@ -282,9 +309,9 @@ section {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 5rem;
 	background: var(--second-bg-color);
-	padding-bottom: 6rem;
+	padding-bottom: 12rem;
 }
 
 .heading {
@@ -363,10 +390,8 @@ span{
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	min-height: auto;
-	padding-bottom: 5rem;
-	gap: 3rem;
-	padding-bottom: 26rem;
+	gap: 5rem;
+	padding-bottom: 12rem;
 }
 
 .education .education-row {
@@ -451,17 +476,14 @@ span{
 }
 
 .skills {
-	min-height: auto;
-	padding-bottom: 31rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5rem;
+	padding-bottom: 12rem;
 	background: var(--second-bg-color);
 }
 
-.skills h2 {
-	display: inline-block;
-	left: 50%;
-	transform: translateX(-50%);
-	padding-bottom: 10rem;
-}
 
 .skills .skills-row {
 	display: flex;
@@ -726,6 +748,7 @@ span{
 .logo .animate,
 .navbar .animate,
 #menu-icon .animate,
+#color-icon .animate,
 .home.show-animate .animate {
 	animation: showRight 1s ease forwards;
 	animation-delay: calc(.3s * var(--i));

@@ -47,3 +47,95 @@ window.onscroll = () => {
 
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
+
+function theme0() {
+    document.documentElement.style.setProperty('--bg-color', '#001c22');
+    document.documentElement.style.setProperty('--second-bg-color', '#003d4a');
+    document.documentElement.style.setProperty('--text-color', '#ededed');
+    document.documentElement.style.setProperty('--main-color', '#ff2d00');
+    document.documentElement.style.setProperty('--bg-image', 'url("../images/home0.jpg")');
+}
+
+function theme1() {
+    document.documentElement.style.setProperty('--bg-color', '#001B14');
+    document.documentElement.style.setProperty('--second-bg-color', '#002E23');
+    document.documentElement.style.setProperty('--text-color', '#EDEDED');
+    document.documentElement.style.setProperty('--main-color', '#ff1142');
+    document.documentElement.style.setProperty('--bg-image', 'url("../images/home1.jpg")');
+}
+
+function theme2() {
+    document.documentElement.style.setProperty('--bg-color', '#0B0F00');
+    document.documentElement.style.setProperty('--second-bg-color', '#142000');
+    document.documentElement.style.setProperty('--text-color', '#EDEDED');
+    document.documentElement.style.setProperty('--main-color', '#A0FF00');
+    document.documentElement.style.setProperty('--bg-image', 'url("../images/home2.jpg")');
+}
+
+function theme3() {
+    document.documentElement.style.setProperty('--bg-color', '#01172E');
+    document.documentElement.style.setProperty('--second-bg-color', '#001F3E');
+    document.documentElement.style.setProperty('--text-color', '#EDEDED');
+    document.documentElement.style.setProperty('--main-color', '#18BDFF');
+    document.documentElement.style.setProperty('--bg-image', 'url("../images/home3.jpg")');
+}
+
+// Function to change to theme 2
+function theme4() {
+    document.documentElement.style.setProperty('--bg-color', '#380003');
+    document.documentElement.style.setProperty('--second-bg-color', '#790004');
+    document.documentElement.style.setProperty('--text-color', '#EDEDED');
+    document.documentElement.style.setProperty('--main-color', '#FF2C33');
+    document.documentElement.style.setProperty('--bg-image', 'url("../images/home4.jpg")');
+}
+
+// Add event listeners to theme buttons
+document.getElementById('theme0').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent default action
+    theme0(); // Change to theme 0
+    localStorage.setItem('selectedTheme', 'theme0');
+});
+
+document.getElementById('theme1').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent default action
+    theme1(); // Change to theme 1
+    localStorage.setItem('selectedTheme', 'theme1');
+});
+
+document.getElementById('theme2').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent default action
+    theme2(); // Change to theme 2
+    localStorage.setItem('selectedTheme', 'theme2');
+});
+
+document.getElementById('theme3').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent default action
+    theme3(); // Change to theme 3
+    localStorage.setItem('selectedTheme', 'theme3');
+});
+
+document.getElementById('theme4').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent default action
+    theme4(); // Change to theme 4
+    localStorage.setItem('selectedTheme', 'theme4');
+});
+
+// Show or hide the dropdown when the color icon is clicked
+document.getElementById('color-icon').addEventListener('click', function () {
+    var dropdown = document.getElementById('color-dropdown');
+    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+});
+
+function applySelectedTheme() {
+    var selectedTheme = localStorage.getItem('selectedTheme');
+    if (selectedTheme) {
+        // Apply the selected theme
+        window[selectedTheme]();
+    } else {
+        // Apply a default theme if no theme is selected
+        theme0();
+    }
+}
+
+// Call the function to apply the selected theme when the website loads
+applySelectedTheme();
