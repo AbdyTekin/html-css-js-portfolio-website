@@ -88,6 +88,29 @@ body {
 	z-index: 1;
 	left: 50%;
 	transform: translateX(-50%);
+	overflow: hidden;
+}
+
+#color-dropdown::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--bg-color);
+	z-index: 1;
+	animation: slide 1s forwards;
+}
+
+@keyframes slide {
+	from {
+		width: 100%;
+	}
+
+	to {
+		width: 0;
+	}
 }
 
 #color-dropdown a {
@@ -96,6 +119,16 @@ body {
     padding: 12px 12px;
     text-decoration: none;
     display: block;
+	transition: .5s;
+}
+
+#color-dropdown a:hover {
+	color: var(--main-color);
+	transition: .5s;
+}
+
+#color-dropdown a.selected {
+	color: var(--main-color);
 }
 
 #color-icon {
@@ -749,6 +782,7 @@ span{
 .navbar .animate,
 #menu-icon .animate,
 #color-icon .animate,
+#color-dropdown .animate,
 .home.show-animate .animate {
 	animation: showRight 1s ease forwards;
 	animation-delay: calc(.3s * var(--i));
