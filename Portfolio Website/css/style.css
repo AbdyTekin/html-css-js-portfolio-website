@@ -517,7 +517,6 @@ span{
 	background: var(--second-bg-color);
 }
 
-
 .skills .skills-row {
 	display: flex;
 	flex-wrap: wrap;
@@ -778,6 +777,10 @@ span{
 	width: 50%;
 }
 
+.animate.animated-text {
+	width: 105%;
+}
+
 .logo .animate,
 .navbar .animate,
 #menu-icon .animate,
@@ -810,6 +813,17 @@ section:nth-child(odd) .animate.scroll,
 .footer.show-animate .animate.scroll {
 	transition-delay: calc(.3s * var(--i));
 	width: 0;
+}
+
+.animate.scroll.about-img {
+	top: -.5rem;
+	right: -.5rem;
+	width: 110%;
+	height: 110%;
+}
+
+.education.show-animate .animate.scroll {
+	background: yellowgreen;
 }
 
 /* BREAKPOINTS */
