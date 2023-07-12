@@ -823,7 +823,7 @@ section:nth-child(odd) .animate.scroll,
 }
 
 .education.show-animate .animate.scroll {
-	background: yellowgreen;
+	background: var(--bg-color);
 }
 
 /* BREAKPOINTS */
