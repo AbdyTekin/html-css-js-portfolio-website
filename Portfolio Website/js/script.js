@@ -126,9 +126,17 @@ document.getElementById('theme4').addEventListener('click', function (event) {
 });
 
 // Show or hide the dropdown when the color icon is clicked
-document.getElementById('color-icon').addEventListener('click', function () {
+document.addEventListener('click', function(event) {
     var dropdown = document.getElementById('color-dropdown');
-    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+    var colorIcon = document.getElementById('color-icon');
+    
+    if (colorIcon.contains(event.target)) {
+        // If the click is on the color icon, toggle the dropdown
+        dropdown.classList.toggle('active');
+    } else if (!dropdown.contains(event.target) && dropdown.classList.contains('active')) {
+        // If the click is outside of the dropdown and the dropdown is active, hide it
+        dropdown.classList.remove('active');
+    }
 });
 
 function applySelectedTheme() {
