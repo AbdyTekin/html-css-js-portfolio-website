@@ -14,9 +14,11 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <h3 class="heading">video gallery</h3>
+    <h3 class="heading">Gallery</h3>
+    <button id="toggleButton">Images~Videos</button>
 
-    <div class="container">
+    <!-- Video Section -->
+    <div class="container" id="videoSection">
         <div class="main-video">
             <div class="video">
                 <video src="../videos/vid-1.mp4" controls muted autoplay></video>
@@ -60,6 +62,23 @@
         </div>
     </div>
 
+    <!-- Image Section -->
+    <div class="container" id="imageSection" style="display: none;">
+        <div class="image-grid">
+            <div class="image"><img src="../images/img-1.jpg" alt=""></div>
+            <div class="image"><img src="../images/img-2.jpg" alt=""></div>
+            <div class="image"><img src="../images/img-3.jpg" alt=""></div>
+            <div class="image"><img src="../images/img-4.jpg" alt=""></div>
+            <div class="image"><img src="../images/img-5.jpg" alt=""></div>
+        </div>
+
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="../images/img-1.jpg" alt="">
+        </div>
+    </div>
+
     <script src="../js/script-gallery.js"></script>
 </body>
 </html>
+
