@@ -1,14 +1,21 @@
 let toggleButton = document.getElementById('toggleButton');
 let videoSection = document.getElementById('videoSection');
 let imageSection = document.getElementById('imageSection');
+let imagesText = document.getElementById('imagesText');
+let videosText = document.getElementById('videosText');
 
+videosText.classList.add('active');
 toggleButton.onclick = () => {
     if (videoSection.style.display !== 'none') {
         videoSection.style.display = 'none';
         imageSection.style.display = 'flex';
+        videosText.classList.remove('active');
+        imagesText.classList.add('active');
     } else {
         videoSection.style.display = 'grid';
         imageSection.style.display = 'none';
+        imagesText.classList.remove('active');
+        videosText.classList.add('active');
     }
 };
 
