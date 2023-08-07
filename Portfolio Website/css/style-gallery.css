@@ -96,10 +96,10 @@ body{
 }
 
 .container .main-video{
-    border: 3px solid var(--main-color);
     background: var(--second-bg-color);
     border-radius: 5px;
     padding: 10px;
+    box-shadow: inset 0 0 5px 0px var(--bg-color);
 }
 
 .container .main-video video{
