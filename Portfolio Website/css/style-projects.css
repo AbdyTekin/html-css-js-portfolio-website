@@ -36,7 +36,6 @@ h1 {
     max-width: 410px;
     width: 100%;
     text-align: center;
-    box-shadow: var(--main-color) 0px 0px 0px 2px;
     box-sizing: border-box;
 }
 
